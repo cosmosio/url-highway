@@ -1,0 +1,38 @@
+{
+  "name": "url-highway",
+  "description": "A url based router",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cosmosio/url-highway",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/cosmosio/url-highway/master/LICENSE"
+    }
+  ],
+  "files": [
+    "LICENSE",
+    "index.js"
+  ],
+  "author": "Olivier Scherrer <pode.fr@gmail.com>",
+  "keywords": [
+    "router",
+    "history"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cosmosio/url-highway.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cosmosio/url-highway/issues"
+  },
+  "scripts": {
+    "test": "jasmine-node test/"
+  },
+  "main": "index.js",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+
+  }
+}
