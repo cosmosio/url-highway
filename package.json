@@ -29,10 +29,9 @@
     "test": "jasmine-node test/"
   },
   "main": "index.js",
-  "devDependencies": {
-
-  },
+  "devDependencies": {},
   "dependencies": {
-
+    "highway": "0.0.2",
+    "to-array": "~0.1.4"
   }
 }
