@@ -172,7 +172,7 @@ function UrlHighway() {
 }
 
 module.exports = function UrlHighwayFactory() {
-    UrlHighway.prototype = new Router();
-    UrlHighway.constructor = UrlHighway;
+    UrlHighway.prototype = new Highway();
+    UrlHighway.constructor = Highway;
     return new UrlHighway();
 };
