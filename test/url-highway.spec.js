@@ -101,7 +101,7 @@ describe("UrlHighway navigates to the route defined by the URL", function () {
 
         urlHighway.bindOnHashChange();
 
-        expect(window.addEventListener).toHaveBeenCalledWith("hashchange", UrlHighway.boundOnHashChange, true);
+        expect(window.addEventListener).toHaveBeenCalledWith("hashchange", urlHighway.boundOnHashChange, true);
     });
 
     it("parses the new hash and navigates to the corresponding route when the hash changes", function () {
@@ -165,7 +165,7 @@ describe("UrlHighway updates the URL when navigating", function () {
 
         urlHighway.bindOnRouteChange();
 
-        expect(urlHighway.watch).toHaveBeenCalledWith(UrlHighway.onRouteChange, UrlHighway);
+        expect(urlHighway.watch).toHaveBeenCalledWith(urlHighway.onRouteChange, urlHighway);
     });
 
     it("updates the hash in the url on route change", function () {
