@@ -1,6 +1,6 @@
 {
   "name": "url-highway",
-  "description": "A url based router",
+  "description": "A url based router based on highway",
   "version": "0.0.1",
   "homepage": "https://github.com/cosmosio/url-highway",
   "licenses": [
