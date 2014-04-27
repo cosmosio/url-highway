@@ -1,7 +1,7 @@
 {
   "name": "url-highway",
   "description": "A url based router based on highway",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/cosmosio/url-highway",
   "licenses": [
     {
@@ -16,7 +16,10 @@
   "author": "Olivier Scherrer <pode.fr@gmail.com>",
   "keywords": [
     "router",
-    "history"
+    "history",
+    "url",
+    "location",
+    "hash"
   ],
   "repository": {
     "type": "git",
