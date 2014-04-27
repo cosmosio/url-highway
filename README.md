@@ -1,7 +1,7 @@
 url-highway
 =============
 
-A url based router. It's based on Highway, which is a simple and extensible router, and adds it url support. The router can listen to hash changes to navigate to a route, or update the hash when navigating to a new route.
+A url based router. It's based on [Highway](https://github.com/cosmosio/highway), which is a simple and extensible router, and adds it url support. The router can listen to hash changes to navigate to a route, or update the hash when navigating to a new route.
 
 Installation
 ============
@@ -59,6 +59,25 @@ window.location.hash = "#route/127/MI";
 highway.navigate("route", "127", "MI");
 ```
 
+Highway's other features are available too:
+====================
+
+Removing a route:
+
+```js
+var handle = highway.set("route", ...);
+
+highway.unset(handle);
+```
+
+Navigating in the history:
+
+```js
+highway.back();
+highway.forward();
+
+highway.go(-2);
+```
 
 LICENSE
 =======
