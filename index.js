@@ -41,12 +41,19 @@ function UrlHighway() {
      */
      /*jshint validthis:true*/
     function doNavigate() {
-        if (window.location.hash) {
+        if (!hashIsEmpty()) {
             var parsedHash = this.parse(window.location.hash);
             this.navigate.apply(this, parsedHash);
         } else {
             this.navigate(_defaultRoute);
         }
+    }
+
+    /**
+     * An empty string or # are both empty hashes
+     */
+    function hashIsEmpty() {
+        return !window.location.hash || window.location.hash == "#";
     }
 
     /**
