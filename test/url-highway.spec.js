@@ -83,8 +83,6 @@ describe("UrlHighway navigates to the route defined by the URL", function () {
 
         spyOn(urlHighway, "navigate");
 
-        debugger;
-
         urlHighway.start("default");
 
         expect(urlHighway.navigate).toHaveBeenCalledWith("default");
