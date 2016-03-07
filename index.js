@@ -3,7 +3,7 @@
 *
 * The MIT License (MIT)
 *
-* Copyright (c) 2014 Olivier Scherrer <pode.fr@gmail.com>
+* Copyright (c) 2014-2016 Olivier Scherrer <pode.fr@gmail.com>
 */
 "use strict";
 
@@ -172,6 +172,10 @@ function UrlHighway() {
         _lastRoute = window.location.hash;
     };
 
+    /**
+     * Get the last, or current, route we've navigated to
+     * @returns {string}
+     */
     this.getLastRoute = function getLastRoute() {
         return _lastRoute;
     };

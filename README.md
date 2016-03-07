@@ -1,7 +1,8 @@
 url-highway
 =============
 
-A url based router. It's based on [Highway](https://github.com/cosmosio/highway), which is a simple and extensible router, and adds it url support. The router can listen to hash changes to navigate to a route, or update the hash when navigating to a new route.
+A url based router. It's based on [Highway](https://github.com/cosmosio/highway), which is a simple and extensible router, and adds it url support. 
+The router can listen to hash changes to navigate to a route, or update the hash when navigating to a new route.
 
 Installation
 ============
@@ -13,7 +14,7 @@ npm install url-highway
 How to use
 ==========
 
-Require and initialize A url based router:
+Require and initialize a url based router:
 
 ```js
 var Highway = require("url-highway"),
@@ -78,6 +79,15 @@ highway.forward();
 
 highway.go(-2);
 ```
+
+CHANGELOG
+=========
+
+###0.0.5 - 21 FEB 2016
+
+ * It's now possible to register routes without giving a callback.
+ * Improved API for getting previous routes
+
 
 LICENSE
 =======

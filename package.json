@@ -1,14 +1,9 @@
 {
   "name": "url-highway",
   "description": "A url based router based on highway",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "homepage": "https://github.com/cosmosio/url-highway",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.github.com/cosmosio/url-highway/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "files": [
     "LICENSE",
     "index.js"
@@ -37,7 +32,7 @@
     "quick-dom": "0.0.1"
   },
   "dependencies": {
-    "highway": "0.0.2",
+    "highway": "~0.0.5",
     "to-array": "~0.1.4"
   }
 }
