@@ -17,9 +17,11 @@ How to use
 Require and initialize a url based router:
 
 ```js
-var Highway = require("url-highway"),
-  highway = new Highway();
+var Highway = require("url-highway");
+
+var highway = new Highway();
 ```
+
 Let's define routes:
 
 ```js
