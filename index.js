@@ -124,7 +124,7 @@ function UrlHighway() {
     /**
      * Remove the events handler for cleaning.
      */
-    this.destroy = function destroy() {
+    this.stop = function stop() {
         this.unwatch(_watchHandle);
         window.removeEventListener("hashchange", this.boundOnHashChange, true);
     };
