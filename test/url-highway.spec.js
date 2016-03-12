@@ -76,5 +76,44 @@ describe("Given UrlHighway", function () {
                 });
             });
         });
+
+        describe("When overriding the method to parse the url", function () {
+            beforeEach(function () {
+                urlHighway.parse = jasmine.createSpy("parse").and.returnValue(["parsme"]);
+            });
+
+            describe("And the hash changes", function () {
+                beforeEach(function () {
+                    window.location.hash = "parsme";
+                });
+
+                it("Then calls the new parse method with the proper arguments", function (done) {
+                    setTimeout(function () {
+                        expect(urlHighway.parse).toHaveBeenCalledWith("#parsme");
+                        done();
+                    }, 0);
+                });
+            });
+        });
+
+        describe("When overriding the method to set the url", function () {
+            beforeEach(function () {
+                urlHighway.toUrl = jasmine.createSpy("toUrl").and.returnValue("this/route/is/formatted");
+            });
+
+            describe("And we navigate to a route", function () {
+                beforeEach(function () {
+                    urlHighway.navigate("format", "this", "route");
+                });
+
+                it("Then calls the new toURl method", function () {
+                    expect(urlHighway.toUrl).toHaveBeenCalledWith(["format", "this", "route"]);
+                });
+
+                it("Then sets the url with the formatted route", function () {
+                    expect(window.location.hash).toEqual("#this/route/is/formatted");
+                });
+            });
+        })
     });
 });
