@@ -41,6 +41,10 @@ describe("Given UrlHighway", function () {
                 it("Then updates the hash", function () {
                     expect(window.location.hash).toEqual("#route1/interstate/D.C");
                 });
+
+                it("Then tells what the last route is", function () {
+                    expect(urlHighway.getLastRoute()).toEqual("#route1/interstate/D.C");
+                });
             });
         });
 

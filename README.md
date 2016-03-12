@@ -22,6 +22,13 @@ var Highway = require("url-highway");
 var highway = new Highway();
 ```
 
+Starting/stopping the router to allow it to watch for hash changes in the url
+
+```js
+urlHighway.start();
+urlHighway.stop();
+```
+
 Let's define routes:
 
 ```js
@@ -61,6 +68,18 @@ window.location.hash = "#route/127/MI";
 // Will call navigate:
 highway.navigate("route", "127", "MI");
 ```
+
+We can also get the last route
+
+```js
+// returns something like: #route/127/MI
+highway.getLastRoute();
+
+
+// We can use parse on it, returns ["route", "127", "MI"]
+highway.parse("#route/127/MI");
+```
+
 
 Highway's other features are available too:
 ====================
