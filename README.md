@@ -85,6 +85,11 @@ highway.go(-2);
 CHANGELOG
 =========
 
+###1.0.0 - 12 MAR 2016
+
+ * Breaking change: `destroy()` renamed to `stop()` 
+ * Update unit tests
+
 ###0.0.5 - 21 FEB 2016
 
  * It's now possible to register routes without giving a callback.
