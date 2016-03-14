@@ -15,6 +15,31 @@ describe("Given UrlHighway", function () {
         urlHighway = new UrlHighway();
     });
 
+    describe("When started with a default route", function () {
+        var spy;
+
+        beforeEach(function () {
+            window.location.hash = "random";
+            spy = jasmine.createSpy("routeHandler");
+            urlHighway.set("defaultRoute", spy);
+
+            urlHighway.start("defaultRoute");
+        });
+
+        describe("And the hash is cleared", function () {
+            beforeEach(function () {
+                window.location.hash = "";
+            });
+
+            it("Then navigates to the default route", function (done) {
+                setTimeout(function () {
+                    expect(spy).toHaveBeenCalled();
+                    done();
+                }, 0);
+            });
+        });
+    });
+
     describe("When started", function () {
         beforeEach(function () {
             urlHighway.start();

@@ -5,8 +5,6 @@
 *
 * Copyright (c) 2014-2016 Olivier Scherrer <pode.fr@gmail.com>
 */
-"use strict";
-
 var Highway = require("highway"),
     toArray = require("to-array");
 
@@ -16,6 +14,7 @@ var Highway = require("highway"),
  * while navigating. It's a subtype of Highway
  */
 function UrlHighway() {
+    "use strict";
 
     /**
      * The handle on the watch
@@ -33,7 +32,7 @@ function UrlHighway() {
      * The last route that was navigated to
      * @private
      */
-    _lastRoute = window.location.hash;
+    _lastRoute;
 
     /**
      * Navigates to the current hash or to the default route if none is supplied in the url
@@ -179,7 +178,6 @@ function UrlHighway() {
     this.getLastRoute = function getLastRoute() {
         return _lastRoute;
     };
-
 }
 
 module.exports = function UrlHighwayFactory() {
